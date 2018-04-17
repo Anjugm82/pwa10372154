@@ -1,0 +1,55 @@
+<ion-header>
+
+  <ion-navbar color="main">
+    <ion-title>Select Your Seats</ion-title>
+  </ion-navbar>
+  <!-- <ion-toolbar *ngIf="screen || dayname">
+     <h5> {{screen.Name}}</h5>
+      <span >{{dayname}}</span>
+      
+    </ion-toolbar> -->
+</ion-header>
+
+
+<ion-content style="background-color:#F0F0F0;">
+  <!-- <div style="background-color:white">
+    <ion-list>
+      <ion-item>
+        <h2 style="color:red;">{{cs.selectedMovie.title}}</h2>
+        <p item-end>{{cs.selectedDay}}</p>
+      </ion-item>
+    </ion-list>
+  </div> -->
+
+  <ion-card class="dd">
+    <span style="float:right;color:rgb(167, 47, 47)"> {{cs.selectedDay.toUpperCase()}} {{cs.selectedTime}} </span>
+    <h2>{{cs.selectedMovie.title}}</h2>
+    <h4 *ngIf="booked_seat"> {{cs.selectedSeats.length}} Seats Selected</h4>
+    <ion-badge item-end style="padding:3px"  *ngFor="let r of cs.selectedSeats"> &nbsp; S-{{r}}  &nbsp; </ion-badge>
+    <!-- <button ion-button color="danger" *ngFor="let r of cs.selectedSeats" outline>S-{{r}}</button> -->
+  </ion-card>
+
+  <div style="background:#F9F9F9;">
+    <ion-card align="center">Screen</ion-card>
+    <ion-grid>
+      <ion-row padding>
+        <ion-col col-2 *ngFor="let s of seats;let i=index">
+          <!-- <div class="dd"  *ngIf="selectedseats[i]==s" style="background-color:green;"></div> -->
+          <!-- <div  class="dd" (click)="selectedchair(i)"  [style.background-color]="d"></div> -->
+          <div class="seat available" *ngIf="s==1" (click)="selectedchair(i,true)" align="center">{{i+1}}</div>
+          <div class="seat booked" *ngIf="s==2" align="center">{{i+1}}</div>
+          <div class="seat selected" *ngIf="s==3" (click)="selectedchair(i,false)" align="center">{{i+1}}</div>
+        </ion-col>
+      </ion-row>
+
+
+    </ion-grid>
+  </div>
+
+
+</ion-content>
+<ion-footer>
+  <div align="center">
+    <button ion-button color="main" style="width:100%" (click)="checklogin()">Confirm Seats</button>
+  </div>
+</ion-footer>

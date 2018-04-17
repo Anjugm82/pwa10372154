@@ -1,0 +1,41 @@
+page-seat {
+    .seat{
+        border:1px solid gray;
+        height:30px;
+        width:30px;
+        color:white;
+    }
+.available{
+    border:1px solid lightgray;
+    background-color:lightgray;
+    font-size:10px;
+    
+}
+.booked{
+    border:1px solid lightgray;
+    background-color:gray;
+    font-size:10px;
+    color:white;
+}
+.selected{
+    border:1px solid lightgray;
+    background-color:green;
+    font-size:10px;
+    color:white;
+    
+}
+.selected-color{
+   background-color:green;
+}
+}
+.seat{
+    height:10px;
+    width:10px;
+    padding:6px;
+    cursor:pointer;
+}
+.dd{
+    width:100%;
+    height:auto;
+    padding:10px;
+}

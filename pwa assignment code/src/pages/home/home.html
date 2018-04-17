@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar color="main">
+    <!-- <ion-buttons end>
+      <button *ngIf="!cs.getLogin()" style="font-size:12px;" ion-button icon-only (click)="openLogin()" small>
+        Login
+      </button> &nbsp;
+      <button *ngIf="cs.getLogin()" style="font-size:12px;" ion-button icon-only (click)="openLogOut()" small>
+        Log Out
+      </button> &nbsp;
+    </ion-buttons> -->
+    <ion-title>Big Cinemas</ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content style="background-color:#F0F0F0;">
+  <!-- <ion-slides pager autoplay="5000" loop="true" style="height:150px;" speed="1000" >        
+          <ion-slide>
+              <img src="assets/imgs/black_panther.jpg" width="100%">
+            </ion-slide> 
+                 
+            <ion-slide>
+                <img src="assets/imgs/ready_player_one.jpg" width="100%">
+              </ion-slide> 
+              <ion-slide>
+                  <img src="assets/imgs/pacific_rim.jpg" width="100%">
+                </ion-slide> 
+    </ion-slides> -->
+  <!-- <br> -->
+  <ion-card *ngFor="let row of cs.masterData.movies">
+    <!-- <img src="assets/imgs/black_panther.jpg" height="200"> -->
+    <ion-card-content>
+      <h2 style="color:#000032;">
+        {{row.title}}
+        
+      </h2>
+      <br>
+      <ion-badge color="dark">{{row.genre}}</ion-badge>
+    
+      <button ion-button color="dark-pink" style="float:right" (click)="openTiming(row)">Book</button>
+      
+      <br>
+      <br>
+
+
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

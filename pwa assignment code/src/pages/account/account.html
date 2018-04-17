@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar color="main">
+    <ion-title>My Bookings</ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content padding style="background-color:#F0F0F0;">
+  <ion-card class="dd" *ngFor="let row of cs.masterData.bookings;let i=index">
+    <span style="float:right;color:rgb(167, 47, 47)"> {{row.day.toUpperCase()}} {{row.time}} </span>
+    <h2>{{row.movie.title}}</h2>
+    
+    <br> Seats
+    <span *ngFor="let s of row.seats">S-{{s}} &nbsp;</span>
+
+    <span style="float:right;color:rgb(167, 47, 47)"> Booked by {{row.user.name}} </span>
+    <br>
+    <br>
+    <button ion-button color="main" outline style="float:right" (click)="cancelBooking(i)">Cancel Booking</button>
+    
+    <!-- Seat No : {{}} -->
+  </ion-card>
+</ion-content>

@@ -1,0 +1,47 @@
+
+Assignment Aim.
+
+To create a progressive web app that connects to a third party api and handles offline and 
+online access gracefully and uses local storage to handle off line activities.
+
+Progressive Web Application: https://developers.google.com/web/progressive-web-apps/
+above mentioned is a base version tutorial of pwa.  (use jquery and html )
+ 
+but in this assigment also suggest u to use latest technologies.  (so ionic framework)
+
+ ---------------------------------------------------------------------------------------------------------
+Project Develope In ionic Frame work
+https://ionicframework.com/
+
+Ionic is a complete open-source SDK for hybrid mobile app development.
+The original version was released in 2013 and built on top of AngularJS and Apache Cordova.
+ 
+Currently using Angular 4 (which uses typescript).
+
+
+output project in -  output hml file (apk is also developed)
+
+Tools used
+
+IDE - Visulal Studio Code
+      install node js
+	  
+	  open project (pwa assignment code)  in visual studio code.
+	  In pwa assignment code/src/    u can see the actual code of project.
+	      --- To run the file----
+		 1) npm install
+		 2) ionic serve 
+		 to build the apk
+		   --- To Build apk ----
+		 1)ionic cordova build android --prod
+			output apk in 
+			pwa assignment code\platforms\android\build\outputs\apk
+			output html file in
+			pwa assignment code\www
+		
+		 
+
+
+
+
+
